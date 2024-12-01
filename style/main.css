@@ -1,0 +1,252 @@
+/* styles.css */
+
+/* Reset general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Título principal */
+.main-title {
+  text-align: left;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Contenedor principal del mosaico */
+.block-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+/* Paneles del mosaico de nivel 1 con colores vibrantes */
+.section-container {
+  padding: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  flex: 1;
+  min-width: 200px;
+  max-width: 350px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px; /* Bordes suaves para el efecto Metro */
+}
+
+/* Colores vibrantes para los paneles de nivel 1 */
+
+/* Colores vibrantes para los paneles de nivel 1 */
+.section-container:nth-child(1) { background-color: #ff5722; } /* Naranja vibrante */
+.section-container:nth-child(2) { background-color: #2196f3; } /* Azul vibrante */
+.section-container:nth-child(3) { background-color: #4caf50; } /* Verde vibrante */
+.section-container:nth-child(4) { background-color: #9c27b0; } /* Púrpura vibrante */
+.section-container:nth-child(5) { background-color: #fbc02d; } /* Amarillo vibrante */
+.section-container:nth-child(6) { background-color: #00bcd4; } /* Cian vibrante */
+.section-container:nth-child(7) { background-color: #e91e63; } /* Rosa vibrante */
+.section-container:nth-child(8) { background-color: #ff9800; } /* Naranja claro */
+.section-container:nth-child(9) { background-color: #795548; } /* Marrón vibrante */
+.section-container:nth-child(10) { background-color: #673ab7; } /* Morado vibrante */
+.section-container:nth-child(11) { background-color: #03a9f4; } /* Azul claro */
+.section-container:nth-child(12) { background-color: #8bc34a; } /* Verde claro */
+.section-container:nth-child(13) { background-color: #ffeb3b; } /* Amarillo claro */
+.section-container:nth-child(14) { background-color: #cddc39; } /* Lima */
+.section-container:nth-child(15) { background-color: #009688; } /* Turquesa */
+.section-container:nth-child(16) { background-color: #3f51b5; } /* Azul índigo */
+.section-container:nth-child(17) { background-color: #ff5252; } /* Rojo claro */
+.section-container:nth-child(18) { background-color: #d500f9; } /* Púrpura fuerte */
+.section-container:nth-child(19) { background-color: #69f0ae; } /* Verde menta */
+.section-container:nth-child(20) { background-color: #ff4081; } /* Rosa fuerte */
+.section-container:nth-child(21) { background-color: #ffd740; } /* Amarillo dorado */
+.section-container:nth-child(22) { background-color: #00e676; } /* Verde neón */
+.section-container:nth-child(23) { background-color: #1e88e5; } /* Azul marino */
+.section-container:nth-child(24) { background-color: #f06292; } /* Rosa coral */
+.section-container:nth-child(25) { background-color: #4db6ac; } /* Verde agua */
+.section-container:nth-child(26) { background-color: #ba68c8; } /* Lavanda vibrante */
+.section-container:nth-child(27) { background-color: #ffab40; } /* Naranja brillante */
+.section-container:nth-child(28) { background-color: #78909c; } /* Gris azulado */
+.section-container:nth-child(29) { background-color: #f44336; } /* Rojo vibrante */
+.section-container:nth-child(30) { background-color: #64b5f6; } /* Azul cielo */
+.section-container:nth-child(31) { background-color: #aed581; } /* Verde claro */
+.section-container:nth-child(32) { background-color: #fff176; } /* Amarillo pastel */
+.section-container:nth-child(33) { background-color: #90a4ae; } /* Gris cálido */
+.section-container:nth-child(34) { background-color: #607d8b; } /* Azul grisáceo */
+.section-container:nth-child(35) { background-color: #ff6e40; } /* Naranja rojizo */
+.section-container:nth-child(36) { background-color: #00acc1; } /* Azul petróleo */
+.section-container:nth-child(37) { background-color: #1de9b6; } /* Turquesa claro */
+.section-container:nth-child(38) { background-color: #ffd54f; } /* Amarillo mostaza */
+.section-container:nth-child(39) { background-color: #7e57c2; } /* Púrpura oscuro */
+.section-container:nth-child(40) { background-color: #ec407a; } /* Rosa oscuro */
+.section-container:nth-child(41) { background-color: #5c6bc0; } /* Azul profundo */
+.section-container:nth-child(42) { background-color: #00bfa5; } /* Verde esmeralda */
+.section-container:nth-child(43) { background-color: #ff7043; } /* Naranja quemado */
+.section-container:nth-child(44) { background-color: #26a69a; } /* Verde oceánico */
+.section-container:nth-child(45) { background-color: #8e24aa; } /* Púrpura vibrante */
+.section-container:nth-child(46) { background-color: #d4e157; } /* Lima claro */
+.section-container:nth-child(47) { background-color: #c2185b; } /* Rosa oscuro intenso */
+.section-container:nth-child(48) { background-color: #ff9100; } /* Naranja neón */
+.section-container:nth-child(49) { background-color: #3949ab; } /* Azul medianoche */
+.section-container:nth-child(50) { background-color: #43a047; } /* Verde bosque */
+.section-container:nth-child(51) { background-color: #00c853; } /* Verde brillante */
+.section-container:nth-child(52) { background-color: #6d4c41; } /* Marrón profundo */
+.section-container:nth-child(53) { background-color: #29b6f6; } /* Azul cielo claro */
+.section-container:nth-child(54) { background-color: #ffa726; } /* Amarillo naranja */
+.section-container:nth-child(55) { background-color: #7cb342; } /* Verde lima */
+.section-container:nth-child(56) { background-color: #ff8a80; } /* Rosa pastel */
+.section-container:nth-child(57) { background-color: #d81b60; } /* Rosa mexicano */
+.section-container:nth-child(58) { background-color: #cddc39; } /* Verde limón */
+.section-container:nth-child(59) { background-color: #3e2723; } /* Marrón oscuro */
+.section-container:nth-child(60) { background-color: #212121; } /* Gris oscuro */
+.section-container:nth-child(61) { background-color: #424242; } /* Gris intermedio */
+.section-container:nth-child(62) { background-color: #e65100; } /* Naranja profundo */
+.section-container:nth-child(63) { background-color: #ff1744; } /* Rojo neón */
+.section-container:nth-child(64) { background-color: #c62828; } /* Rojo ladrillo */
+.section-container:nth-child(65) { background-color: #ad1457; } /* Rosa fuerte oscuro */
+.section-container:nth-child(66) { background-color: #6a1b9a; } /* Púrpura intenso */
+.section-container:nth-child(67) { background-color: #4527a0; } /* Índigo profundo */
+.section-container:nth-child(68) { background-color: #283593; } /* Azul imperial */
+.section-container:nth-child(69) { background-color: #1565c0; } /* Azul eléctrico */
+.section-container:nth-child(70) { background-color: #0277bd; } /* Azul océano */
+.section-container:nth-child(71) { background-color: #00838f; } /* Cian oscuro */
+.section-container:nth-child(72) { background-color: #00695c; } /* Verde oscuro */
+.section-container:nth-child(73) { background-color: #2e7d32; } /* Verde profundo */
+.section-container:nth-child(74) { background-color: #558b2f; } /* Verde oliva */
+.section-container:nth-child(75) { background-color: #9e9d24; } /* Verde mostaza */
+.section-container:nth-child(76) { background-color: #f57f17; } /* Amarillo tostado */
+.section-container:nth-child(77) { background-color: #ff6f00; } /* Naranja quemado claro */
+.section-container:nth-child(78) { background-color: #bf360c; } /* Marrón rojizo */
+.section-container:nth-child(79) { background-color: #e64a19; } /* Rojo anaranjado */
+.section-container:nth-child(80) { background-color: #5d4037; } /* Marrón chocolate */
+.section-container:nth-child(81) { background-color: #455a64; } /* Gris azul profundo */
+.section-container:nth-child(82) { background-color: #37474f; } /* Azul acero */
+.section-container:nth-child(83) { background-color: #78909c; } /* Azul gris suave */
+.section-container:nth-child(84) { background-color: #546e7a; } /* Azul ceniza */
+.section-container:nth-child(85) { background-color: #e91e63; } /* Rosa brillante */
+.section-container:nth-child(86) { background-color: #d500f9; } /* Púrpura intenso */
+.section-container:nth-child(87) { background-color: #76ff03; } /* Verde neón brillante */
+.section-container:nth-child(88) { background-color: #fbc02d; } /* Amarillo vibrante */
+.section-container:nth-child(89) { background-color: #f57f17; } /* Amarillo quemado */
+.section-container:nth-child(90) { background-color: #880e4f; } /* Rosa profundo */
+.section-container:nth-child(91) { background-color: #4a148c; } /* Púrpura oscuro */
+.section-container:nth-child(92) { background-color: #311b92; } /* Azul noche */
+.section-container:nth-child(93) { background-color: #1a237e; } /* Azul marino intenso */
+.section-container:nth-child(94) { background-color: #0d47a1; } /* Azul medianoche */
+.section-container:nth-child(95) { background-color: #01579b; } /* Azul zafiro */
+.section-container:nth-child(96) { background-color: #006064; } /* Verde oceánico oscuro */
+.section-container:nth-child(97) { background-color: #004d40; } /* Verde profundo oscuro */
+.section-container:nth-child(98) { background-color: #1b5e20; } /* Verde musgo oscuro */
+.section-container:nth-child(99) { background-color: #33691e; } /* Verde bosque */
+.section-container:nth-child(100) { background-color: #827717; } /* Amarillo oliva */
+
+/* Títulos de los paneles */
+.section-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Paneles internos (nivel 2) con fondo blanco y ligera transparencia */
+.block {
+  background-color: rgba(255, 255, 255, 0.3); /* Blanco con transparencia */
+  padding: 10px;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 3px; /* Bordes suaves para el efecto Metro */
+}
+
+/* Lista de elementos */
+.token-list-item {
+  list-style: none;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.2); /* Negro con ligera transparencia */
+  color: #ffffff;
+  margin-bottom: 5px;
+  transition: transform 0.2s, background-color 0.2s;
+  border-radius: 3px; /* Bordes suaves para el efecto Metro */
+  cursor: pointer; /* Mostrar cursor de mano */
+}
+
+/* Efecto hover para los tokens */
+.token-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Un poco más opaco al pasar el ratón */
+  transform: scale(1.05); /* Efecto de agrandar ligeramente */
+}
+
+/* Ajustes para asegurar tamaños coherentes en tamaños de pantalla */
+@media (max-width: 768px) {
+  .section-container {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .section-container {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1201px) {
+  .section-container {
+    width: calc(25% - 20px);
+  }
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  color: #1e1e1e;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #555555;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
