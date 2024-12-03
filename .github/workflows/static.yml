@@ -1,43 +1,58 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Flujo de trabajo para desplegar contenido estático en GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Ejecutar el flujo cuando se haga un push a la rama principal
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permitir ejecutar el flujo manualmente desde la pestaña Actions
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Configuración de permisos para GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read # Permisos de lectura para los contenidos
+  pages: write   # Permisos para escribir en GitHub Pages
+  id-token: write # Permisos necesarios para autenticación en GitHub Pages
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Configurar concurrencia para evitar conflictos en despliegues múltiples
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages" # Identificar un grupo de concurrencia para despliegues
+  cancel-in-progress: false # Permitir que los despliegues actuales terminen
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Definir un trabajo llamado "deploy" para manejar el despliegue
   deploy:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      name: github-pages # Configurar el entorno como GitHub Pages
+      url: ${{ steps.deployment.outputs.page_url }} # URL generada por Pages
+    runs-on: ubuntu-latest # Especificar el sistema operativo para ejecutar el flujo
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      # Paso 1: Descargar el código del repositorio
+      - name: Checkout code
+        uses: actions/checkout@v4 # Acción que descarga el repositorio en el entorno de ejecución
+
+      # Paso 2: Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Versión de Node.js requerida para el proyecto
+
+      # Paso 3: Instalar las dependencias del proyecto
+      - name: Install dependencies
+        run: yarn install # Usa Yarn para instalar las dependencias definidas en package.json
+
+      # Paso 4: Construir el proyecto
+      - name: Build project
+        run: yarn build # Ejecuta el script de construcción definido en package.json (genera el contenido en `dist`)
+
+      # Paso 5: Subir el contenido generado en `dist` como un artefacto para despliegue
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: 'dist' # Solo sube el contenido de la carpeta `dist`
+
+      # Paso 6: Desplegar el contenido a GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Acción que publica el contenido en GitHub Pages
