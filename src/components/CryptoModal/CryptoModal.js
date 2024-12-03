@@ -45,7 +45,6 @@ const CryptoModal = ({ open, onClose, crypto }) => {
             style={{
               width: '28px',
               height: '28px',
-              borderRadius: '50%',
             }}
           />
           <Typography variant="h6" sx={{ fontWeight: 'bold' }}>

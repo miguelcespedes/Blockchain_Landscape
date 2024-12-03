@@ -104,17 +104,8 @@ const Panel = ({ panel, panelWidth, onCardClick }) => (
             style={{
               width: '48px',
               height: '48px',
-              borderRadius: '50%',
               marginRight: '16px',
-              border: '2px solid #5aa1f8',
-              transition: 'transform 0.3s ease',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.transform = 'scale(1.1)')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.transform = 'scale(1.0)')
-            }
           />
           <Typography variant="body1" sx={{ fontWeight: '500', color: '#d8e2ef' }}>
             {card.slug}
