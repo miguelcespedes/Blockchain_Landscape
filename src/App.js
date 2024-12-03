@@ -32,8 +32,8 @@ const getGridConfig = (screenWidth) => {
     };
   } else {
     return {
-      columns: 1,
-      panelWidth: '100%',
+      columns: 2,
+      panelWidth: `${100 / 2}%`,
     };
   }
 };
